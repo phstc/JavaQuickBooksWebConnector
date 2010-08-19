@@ -38,11 +38,15 @@ public class ItemQueryRqSoapImpl implements QBWebConnectorSvcSoap {
 		return null;
 	}
 
+	/**
+	 * @return A positive integer less than 100 represents the percentage of work completed. A value of 1 means one percent complete, a value of 100 means 100 percent complete--there is no more work. A negative value means an error has occurred and the Web Connector responds to this with a getLastError call. The negative value could be used as a custom error code.
+	 */
 	@Override
-	public int receiveResponseXML(String ticket, String response,
+	public int receiveResponseXML(String ticket, 
+			String response,
 			String hresult, String message) {
 		// TODO Auto-generated method stub
-		return 0;
+		return 100;
 	}
 
 	@Override
@@ -51,7 +55,7 @@ public class ItemQueryRqSoapImpl implements QBWebConnectorSvcSoap {
 			int qbXMLMinorVers) {
 		//Example qbXML to Query for an Item
 		//http://www.consolibyte.com/wiki/doku.php/quickbooks_qbxml_itemquery
-		String query = "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml version=\"7.0\"?><QBXML><QBXMLMsgsRq onError=\"stopOnError\"><ItemQueryRq requestID=\"SXRlbVF1ZXJ5fDEyMA==\"></ItemQueryRq></QBXMLMsgsRq></QBXML>";
+		String query = "<?xml version=\"1.0\" encoding=\"utf-8\"?><?qbxml version=\"7.0\"?><QBXML><QBXMLMsgsRq onError=\"stopOnError\"><ItemQueryRq requestID=\"SXRlbVF1ZXJ5fDEyMA==\"><OwnerID>0</OwnerID></ItemQueryRq></QBXMLMsgsRq></QBXML>";
 		return query;
 	}
 
