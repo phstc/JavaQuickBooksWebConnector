@@ -10,21 +10,21 @@ The example.qwc is an example file, that is needed to add an application in the 
 This example is available on the QuickBooks Web Connector Programmer Guide
 https://member.developer.intuit.com/qbSDK-current/QBSDK7.0/doc/PDF/QBWC_proguide.pdf
 
-	<?xml version="1.0"?>
-	<QBWCXML>
-	 <AppName>WCWebService1</AppName>
-	 <AppID></AppID>
-	 <AppURL>http://localhost/WCWebService/WCWebService.asmx</AppURL>
-	 <AppDescription>A short description for WCWebService1</AppDescription>
-	 <AppSupport>http://developer.intuit.com</AppSupport>
-	 <UserName>iqbal1</UserName>
-	 <OwnerID>{57F3B9B1-86F1-4fcc-B1EE-566DE1813D20}</OwnerID>
-	 <FileID>{90A44FB5-33D9-4815-AC85-BC87A7E7D1EB}</FileID>
-	 <QBType>QBFS</QBType>
-	 <Scheduler>
-	 <RunEveryNMinutes>2</RunEveryNMinutes>
-	 </Scheduler>
-	</QBWCXML>
+ <?xml version="1.0"?>
+ <QBWCXML>
+   <AppName>WCWebService1</AppName>
+   <AppID></AppID>
+   <AppURL>http://localhost/WCWebService/WCWebService.asmx</AppURL>
+   <AppDescription>A short description for WCWebService1</AppDescription>
+   <AppSupport>http://developer.intuit.com</AppSupport>
+   <UserName>iqbal1</UserName>
+   <OwnerID>{57F3B9B1-86F1-4fcc-B1EE-566DE1813D20}</OwnerID>
+   <FileID>{90A44FB5-33D9-4815-AC85-BC87A7E7D1EB}</FileID>
+   <QBType>QBFS</QBType>
+   <Scheduler>
+     <RunEveryNMinutes>2</RunEveryNMinutes>
+   </Scheduler>
+ </QBWCXML>
 	
 You must change this values for your enviroment configuration
 
@@ -43,25 +43,25 @@ This gist https://gist.github.com/703886 contains an example implementation
 
 Java SE version:
 
-	package com.cantero.quickbooks.ws;
+ package com.cantero.quickbooks.ws;
  
-	import javax.xml.ws.Endpoint;
+ import javax.xml.ws.Endpoint;
  
-	public class Main {
-	 public static void main(String[] args) {
-	 Endpoint.publish("http://192.168.0.137:54321/ItemQueryRqSoapImpl",
-	 new ItemQueryRqSoapImpl());
-	 }
-	}
+ public class Main {
+  public static void main(String[] args) {
+   Endpoint.publish("http://192.168.0.137:54321/ItemQueryRqSoapImpl",
+   new ItemQueryRqSoapImpl());
+  }
+ }
 
 Spring version - app-config.xml:
 
-<bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter">
-	<property name="baseAddress" value="http://192.168.0.137:9801/" />
-</bean>
+ <bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter">
+ 	<property name="baseAddress" value="http://192.168.0.137:9801/" />
+ </bean>
 
-<bean id="ItemInventoryQueryRqWS"
-	class="com.cantero.atec.placar_online.quickbooks.ws.ItemInventoryQueryRqWS" />
+ <bean id="ItemInventoryQueryRqWS"
+ 	class="com.cantero.atec.placar_online.quickbooks.ws.ItemInventoryQueryRqWS" />
 
 
 === Doubts or Suggestions
@@ -69,10 +69,10 @@ Spring version - app-config.xml:
 Contributors are welcome ;)
 
 I wrote a blog post (in portuguese) with more detailed explanation about the integration of QWC with Java
-http://pablocantero.com/blog/2010/08/17/guia-pratico-do-quickbooks-web-connector-com-java/
+http://pablocantero.com/blog/2010/08/17/guia-pratico-do-quickbooks-web-connector-com-java
 
 This blog post (also in portuguese) explains Java SE and Spring usages to run the implementation
-http://pablocantero.com/blog/2010/08/28/publicando-um-web-service-jax-ws-spring-mvc-3/
+http://pablocantero.com/blog/2010/08/28/publicando-um-web-service-jax-ws-spring-mvc-3
 
 To contact me 
-http://pablocantero.com/blog/contato/
+http://pablocantero.com/blog/contato
