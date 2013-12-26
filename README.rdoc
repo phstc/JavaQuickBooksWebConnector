@@ -12,6 +12,7 @@ This example is available on the QuickBooks Web Connector Programmer Guide.
 
 https://member.developer.intuit.com/qbSDK-current/QBSDK7.0/doc/PDF/QBWC_proguide.pdf
 
+
  <?xml version="1.0"?>
  <QBWCXML>
    <AppName>WCWebService1</AppName>
@@ -27,17 +28,19 @@ https://member.developer.intuit.com/qbSDK-current/QBSDK7.0/doc/PDF/QBWC_proguide
      <RunEveryNMinutes>2</RunEveryNMinutes>
    </Scheduler>
  </QBWCXML>
+
 	
 You must change these values based on your own configuration.
 
 Pay attention in AppURL, HTTP is only permitted for localhost, for the "internet" you must use HTTPS.
 
-=== The usage
+=== Usage
 
 To use this implementation you only need to implement the com.cantero.ws.client.QBWebConnectorSvcSoap.
 
-	@WebService(endpointInterface = "com.cantero.ws.client.QBWebConnectorSvcSoap")
-	public class ItemQueryRqSoapImpl implements QBWebConnectorSvcSoap {
+  @WebService(endpointInterface = "com.cantero.ws.client.QBWebConnectorSvcSoap")
+  public class ItemQueryRqSoapImpl implements QBWebConnectorSvcSoap {
+
 	
 This gist https://gist.github.com/703886 contains an example implementation.
 
@@ -69,8 +72,10 @@ Spring version - app-config.xml:
 === More
 
 I wrote a blog post (in portuguese) with a more detailed explanation about the integration beetween QWC and Java.
+
 http://pablocantero.com/blog/2010/08/17/guia-pratico-do-quickbooks-web-connector-com-java
 
 The blog post below (also in portuguese) shows the Java SE and Spring usage to run this implementation.
+
 http://pablocantero.com/blog/2010/08/28/publicando-um-web-service-jax-ws-spring-mvc-3
 
