@@ -1,13 +1,15 @@
 == It's a QuickBooks Web Connector QWC implementation in Java
 
-This implementation uses wsimport (JAX-WS) to generate the interfaces for QWC Web Services
+This implementation uses wsimport (JAX-WS) to generate the interfaces for QWC Web Services.
+
 http://download.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html
 
 === QWC File example.qwc
 
-The example.qwc is an example file, that is needed to add an application in the QuickBooks Web Connector
+The example.qwc is an example file, which is needed in order to add an application in the QuickBooks Web Connector.
 
-This example is available on the QuickBooks Web Connector Programmer Guide
+This example is available on the QuickBooks Web Connector Programmer Guide.
+
 https://member.developer.intuit.com/qbSDK-current/QBSDK7.0/doc/PDF/QBWC_proguide.pdf
 
  <?xml version="1.0"?>
@@ -26,18 +28,18 @@ https://member.developer.intuit.com/qbSDK-current/QBSDK7.0/doc/PDF/QBWC_proguide
    </Scheduler>
  </QBWCXML>
 	
-You must change this values for your enviroment configuration
+You must change these values based on your own configuration.
 
-Pay attention in AppURL tag, HTTP is only permitted for localhost, for the "internet", you need to use HTTPS
+Pay attention in AppURL, HTTP is only permitted for localhost, for the "internet" you must use HTTPS.
 
 === The usage
 
-To use this implementation you only need to implement the com.cantero.ws.client.QBWebConnectorSvcSoap
+To use this implementation you only need to implement the com.cantero.ws.client.QBWebConnectorSvcSoap.
 
 	@WebService(endpointInterface = "com.cantero.ws.client.QBWebConnectorSvcSoap")
 	public class ItemQueryRqSoapImpl implements QBWebConnectorSvcSoap {
 	
-This gist https://gist.github.com/703886 contains an example implementation
+This gist https://gist.github.com/703886 contains an example implementation.
 
 === To run
 
@@ -64,15 +66,11 @@ Spring version - app-config.xml:
  	class="com.cantero.atec.placar_online.quickbooks.ws.ItemInventoryQueryRqWS" />
 
 
-=== Doubts or Suggestions
+=== More
 
-Contributors are welcome ;)
-
-I wrote a blog post (in portuguese) with more detailed explanation about the integration of QWC with Java
+I wrote a blog post (in portuguese) with a more detailed explanation about the integration beetween QWC and Java.
 http://pablocantero.com/blog/2010/08/17/guia-pratico-do-quickbooks-web-connector-com-java
 
-This blog post (also in portuguese) explains Java SE and Spring usages to run the implementation
+The blog post below (also in portuguese) shows the Java SE and Spring usage to run this implementation.
 http://pablocantero.com/blog/2010/08/28/publicando-um-web-service-jax-ws-spring-mvc-3
 
-To contact me 
-http://pablocantero.com/blog/contato
