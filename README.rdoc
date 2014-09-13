@@ -1,4 +1,4 @@
-== It's a QuickBooks Web Connector QWC implementation in Java
+== QuickBooks Web Connector (QWC) implementation in Java
 
 This implementation uses wsimport (JAX-WS) to generate the interfaces for QWC Web Services.
 
@@ -6,7 +6,7 @@ http://download.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html
 
 === QWC File example.qwc
 
-The example.qwc is an example file, which is needed in order to add an application in the QuickBooks Web Connector.
+The example.qwc is needed in order to add an application in the QuickBooks Web Connector.
 
 This example is available on the QuickBooks Web Connector Programmer Guide.
 
@@ -32,7 +32,7 @@ https://member.developer.intuit.com/qbSDK-current/QBSDK7.0/doc/PDF/QBWC_proguide
 	
 You must change these values based on your own configuration.
 
-Pay attention in AppURL, HTTP is only permitted for localhost, for the "internet" you must use HTTPS.
+Pay attention on the AppURL, HTTP is only permitted for localhost, for the "internet" you must use HTTPS.
 
 === Usage
 
@@ -42,7 +42,7 @@ To use this implementation you only need to implement the com.cantero.ws.client.
   public class ItemQueryRqSoapImpl implements QBWebConnectorSvcSoap {
 
 	
-This gist https://gist.github.com/703886 contains an example implementation.
+This gist https://gist.github.com/703886 contains a sample implementation.
 
 === To run
 
@@ -71,11 +71,11 @@ Spring version - app-config.xml:
 
 === More
 
-I wrote a blog post (in portuguese) with a more detailed explanation about the integration beetween QWC and Java.
+A pratical guide to integrate QWC with Java SE (in portuguese):
 
 http://pablocantero.com/blog/2010/08/17/guia-pratico-do-quickbooks-web-connector-com-java
 
-The blog post below (also in portuguese) shows the Java SE and Spring usage to run this implementation.
+An example using Spring MVC (also in portuguese):
 
 http://pablocantero.com/blog/2010/08/28/publicando-um-web-service-jax-ws-spring-mvc-3
 
